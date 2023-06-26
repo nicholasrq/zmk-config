@@ -65,7 +65,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB      &kp EXCL  &kp AT          &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
+  &kp TAB      &kp EXCL  &kp AT          &kp HASH  &kp DLLR  &kp PRCNT    &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
 &kp LCTRL  &kp LEFT_ALT  &trans            &trans    &trans     &trans       &trans     &trans     &trans            &trans             &trans    &trans
 &kp LSHFT        &trans  &trans            &trans    &trans     &trans       &trans     &trans     &trans     &kp BACKSLASH             &trans    &trans
                                  &kp LEFT_COMMAND    &trans  &kp SPACE      &kp RET     &trans   &kp RALT
