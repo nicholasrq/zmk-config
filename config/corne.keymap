@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB        &kp N1        &kp N2            &kp N3       &kp N4     &kp N5             &kp N6           &kp N7           &kp N8           &kp N9  &kp N0  &kp BSPC
-   &trans  &kp LG(LBKT)  &kp LG(RBKT)     &kp LG(SPACE)  &kp LS(TAB)    &kp TAB           &kp LEFT         &kp DOWN           &kp UP        &kp RIGHT  &trans    &trans
-&kp LSHFT        &trans     &kp LG(Z)     &kp LG(LS(Z))    &kp LG(K)     &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans    &trans
-                                       &kp LEFT_COMMAND       &trans  &kp SPACE            &kp RET           &trans         &kp RALT
+  &kp TAB        &kp N1         &kp N2            &kp N3       &kp N4     &kp N5             &kp N6           &kp N7           &kp N8           &kp N9  &kp N0  &kp BSPC
+   &trans  &kp LG(LBKT)   &kp LG(RBKT)     &kp LG(SPACE)  &kp LS(TAB)    &kp TAB           &kp LEFT         &kp DOWN           &kp UP        &kp RIGHT  &trans    &trans
+&kp LSHFT     &kp LG(Z)  &kp LG(LS(Z))         &kp LG(C)    &kp LG(V)     &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans    &trans
+                                        &kp LEFT_COMMAND       &trans  &kp SPACE            &kp RET           &trans         &kp RALT
             >;
         };
 
