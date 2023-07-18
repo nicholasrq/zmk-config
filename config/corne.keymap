@@ -35,7 +35,13 @@
             compatible = "zmk,behavior-macro";
             label = "TMUX_SESSION_SWITCH";
             #binding-cells = <0>;
-            bindings = <&kp LC(S) &kp F>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(S)>,
+                <&macro_release>,
+                <&kp F>,
+                <&macro_release>,
+                <&kp LC(S)>;
         };
         tmux_scroll_mode: tmux_scroll_mode {
             compatible = "zmk,behavior-macro";
