@@ -85,7 +85,7 @@
             >;
         };
 
-        lower_layer {
+        navigation_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -93,11 +93,13 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans                &trans                 &trans            &trans  &kp LG(R)  &trans    &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE     &trans  &trans  &trans
-&trans              &kp LGUI               &kp LALT  &kp LEFT_CONTROL  &kp LSHFT  &trans        &kp LEFT       &kp DOWN          &kp UP  &kp RIGHT  &trans  &trans
-&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)            &trans     &trans  &trans          &trans         &trans          &trans     &trans  &trans  &trans
-                                                               &trans     &trans  &trans          &trans         &trans          &trans
+&trans                &trans                 &trans            &trans  &kp LG(R)  &trans    &kp LG(X)  &kp LG(C)  &kp LG(V)     &trans  &trans  &trans
+&trans              &kp LGUI               &kp LALT  &kp LEFT_CONTROL  &kp LSHFT  &trans     &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)            &trans     &trans  &trans       &trans     &trans     &trans     &trans  &trans  &trans
+                                                               &trans     &trans  &trans       &trans     &trans     &trans
             >;
+
+            label = "Nav";
         };
 
         num_layer {
@@ -119,7 +121,7 @@
                                &trans     &trans  &trans       &trans           &trans        &trans
             >;
 
-            label = "SYM";
+            label = "Sym";
         };
 
         fn_layer {
@@ -141,7 +143,7 @@
                                      &trans  &trans  &trans             &trans           &trans           &trans
             >;
 
-            label = "MEDIA";
+            label = "Media";
         };
 
         tmux {
