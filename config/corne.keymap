@@ -12,6 +12,57 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        l_sqb {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <14 15>;
+            layers = <0>;
+        };
+
+        l_par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <15 16>;
+        };
+
+        r_par {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <20 19>;
+        };
+
+        r_sqb {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <21 20>;
+        };
+
+        til {
+            bindings = <&kp TILDE>;
+            key-positions = <26 27>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <33 32>;
+        };
+
+        col {
+            bindings = <&kp COLON>;
+            key-positions = <2 3>;
+        };
+
+        semi {
+            bindings = <&kp SEMI>;
+            key-positions = <8 9>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <3 4>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
