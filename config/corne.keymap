@@ -22,46 +22,55 @@
         l_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <15 16>;
+            layers = <0>;
         };
 
         r_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <20 19>;
+            layers = <0>;
         };
 
         r_sqb {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <21 20>;
+            layers = <0>;
         };
 
         til {
             bindings = <&kp TILDE>;
             key-positions = <26 27>;
+            layers = <0>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <33 32>;
+            layers = <0>;
         };
 
         col {
             bindings = <&kp COLON>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         semi {
             bindings = <&kp SEMI>;
             key-positions = <8 9>;
+            layers = <0>;
         };
 
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <3 4>;
+            layers = <0>;
         };
 
         plus {
             bindings = <&kp PLUS>;
             key-positions = <7 8>;
+            layers = <0>;
         };
     };
 
