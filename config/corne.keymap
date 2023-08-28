@@ -93,10 +93,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans                &trans                 &trans            &trans  &kp LG(R)  &trans    &kp K_CUT  &kp K_COPY  &kp K_PASTE     &trans  &trans  &trans
-&trans              &kp LGUI               &kp LALT  &kp LEFT_CONTROL  &kp LSHFT  &trans     &kp LEFT    &kp DOWN       &kp UP  &kp RIGHT  &trans  &trans
-&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)            &trans     &trans  &trans       &trans      &trans       &trans     &trans  &trans  &trans
-                                                               &trans     &trans  &trans       &trans      &trans       &trans
+&trans                &trans                 &trans            &trans  &kp LG(R)  &trans    &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE     &trans  &trans  &trans
+&trans              &kp LGUI               &kp LALT  &kp LEFT_CONTROL  &kp LSHFT  &trans        &kp LEFT       &kp DOWN          &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)            &trans     &trans  &trans          &trans         &trans          &trans     &trans  &trans  &trans
+                                                               &trans     &trans  &trans          &trans         &trans          &trans
             >;
         };
 
