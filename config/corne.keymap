@@ -163,9 +163,9 @@
 
         window_layer {
             bindings = <
-&trans  &trans  &trans  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &trans                   &trans                 &trans                 &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &trans    &kp LS(LA(LC(LG(Y))))  &kp LS(LA(LC(LG(U))))                 &trans                 &trans  &trans  &trans
 &trans  &trans  &trans                 &trans  &kp LS(LA(LC(LG(F))))  &trans    &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(L))))  &trans  &trans
-&trans  &trans  &trans                 &trans                 &trans  &trans                   &trans                 &trans                 &trans                 &trans  &trans  &trans
+&trans  &trans  &trans                 &trans                 &trans  &trans                   &trans  &kp LS(LA(LC(LG(M))))                 &trans                 &trans  &trans  &trans
                                        &trans                 &trans  &trans                   &trans                 &trans                 &trans
             >;
 
