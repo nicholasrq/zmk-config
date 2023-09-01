@@ -10,6 +10,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    spi3 {
+      chain-length = <54>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
