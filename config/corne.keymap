@@ -230,10 +230,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &tmux_prev_session  &tmux_next_session     &trans                &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &tmux_scroll_mode   &tmux_toggle_collapse  &tmux_session_switch  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(Z)           &tmux_prev_window      &tmux_next_window     &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans              &trans                 &trans
+&trans  &trans  &trans     &trans  &trans  &kp PIPE     &tmux_prev_session  &tmux_next_session     &trans                &trans  &trans  &trans
+&trans  &trans  &kp LC(S)  &trans  &trans  &kp MINUS    &tmux_scroll_mode   &tmux_toggle_collapse  &tmux_session_switch  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans       &kp LC(Z)           &tmux_prev_window      &tmux_next_window     &trans  &trans  &trans
+                           &trans  &trans  &trans       &trans              &trans                 &trans
             >;
 
             label = "Tmux";
