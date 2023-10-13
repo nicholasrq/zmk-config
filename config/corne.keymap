@@ -252,7 +252,7 @@
             bindings = <
 &trans  &kp Q           &lt 7 W         &kp F        &kp P         &kp B     &kp J   &kp L         &kp U        &kp Y       &kp SEMI    &kp LBKT
 &trans  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp G     &kp M   &hm RSHIFT N  &hm RCTRL E  &hm RALT I  &hm RCMD O  &kp APOS
-&trans  &kp Z           &kp X           &kp C        &kp V         &kp D     &kp K   &kp H         &kp COMMA    &kp DOT     &kp FSLH    &trans
+&trans  &kp X           &kp C           &kp D        &kp V         &kp Z     &kp K   &kp H         &kp COMMA    &kp DOT     &kp FSLH    &trans
                                         &trans       &trans        &trans    &trans  &trans        &trans
             >;
 
