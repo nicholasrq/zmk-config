@@ -20,61 +20,61 @@
         l_sqb {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <14 15>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         l_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <15 16>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         r_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <20 19>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         r_sqb {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <21 20>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         til {
             bindings = <&kp TILDE>;
             key-positions = <26 27>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <33 32>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         col {
             bindings = <&kp COLON>;
             key-positions = <2 3>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         semi {
             bindings = <&kp SEMI>;
             key-positions = <8 9>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <3 4>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         plus {
             bindings = <&kp PLUS>;
             key-positions = <7 8>;
-            layers = <0>;
+            layers = <0 8>;
         };
     };
 
@@ -131,9 +131,7 @@
         hm: home_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME MOD";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             global-quick-tap;
@@ -202,7 +200,7 @@
 
         fn_layer {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &kp LS(LG(NUMBER_3))  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans    &trans    &tog 8     &trans     &trans    &kp LS(LG(NUMBER_3))  &kp F7  &kp F8  &kp F9  &kp F10  &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LS(LG(NUMBER_4))  &kp F4  &kp F5  &kp F6  &trans   &trans
 &trans  &trans    &trans    &trans     &trans     &trans    &trans                &kp F1  &kp F2  &kp F3  &trans   &trans
                             &trans     &trans     &trans    &trans                &trans  &trans
@@ -248,6 +246,17 @@
             >;
 
             label = "Win";
+        };
+
+        colemak {
+            bindings = <
+&trans  &kp Q           &lt 7 W         &kp F        &kp P         &kp B     &kp J   &kp L         &kp U        &kp Y       &kp SEMI    &kp LBKT
+&trans  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp G     &kp M   &hm RSHIFT N  &hm RCTRL E  &hm RALT I  &hm RCMD O  &kp APOS
+&trans  &kp Z           &kp X           &kp C        &kp V         &kp D     &kp K   &kp H         &kp COMMA    &kp DOT     &kp FSLH    &trans
+                                        &trans       &trans        &trans    &trans  &trans        &trans
+            >;
+
+            label = "CLM";
         };
     };
 };
