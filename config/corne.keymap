@@ -172,7 +172,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QW_TOG";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&to 0>;
+            bindings = <&kp LG(SPACE)>, <&to 0>;
         };
     };
 
