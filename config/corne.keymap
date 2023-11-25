@@ -20,61 +20,61 @@
         l_sqb {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <14 15>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         l_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <15 16>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         r_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <20 19>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         r_sqb {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <21 20>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         til {
             bindings = <&kp TILDE>;
             key-positions = <26 27>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <33 32>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         col {
             bindings = <&kp COLON>;
             key-positions = <2 3>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         semi {
             bindings = <&kp SEMI>;
             key-positions = <8 9>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <3 4>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
 
         plus {
             bindings = <&kp PLUS>;
             key-positions = <7 8>;
-            layers = <0 8>;
+            layers = <0 1>;
         };
     };
 
@@ -85,6 +85,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp Z>;
         };
+
         tmux_session_switch: tmux_session_switch {
             compatible = "zmk,behavior-macro";
             label = "TMUX_SESSION_SWITCH";
@@ -95,30 +96,35 @@
                 <&macro_release>,
                 <&kp LC(S) &kp F>;
         };
+
         tmux_scroll_mode: tmux_scroll_mode {
             compatible = "zmk,behavior-macro";
             label = "TMUX_SCROLL_MODE";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp LEFT_BRACKET>;
         };
+
         tmux_next_window: tmux_next_window {
             compatible = "zmk,behavior-macro";
             label = "Go to next tmux window";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp N>;
         };
+
         tmux_prev_window: tmux_prev_window {
             compatible = "zmk,behavior-macro";
             label = "TMUX_PREV_WINDOW";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp P>;
         };
+
         tmux_prev_session: tmux_prev_session {
             compatible = "zmk,behavior-macro";
             label = "TMUX_PREV_SESSION";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp LEFT_PARENTHESIS>;
         };
+
         tmux_next_session: tmux_next_session {
             compatible = "zmk,behavior-macro";
             label = "TMUX_NEXT_SESSION";
@@ -152,11 +158,22 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q       &lt 7 W         &kp E         &kp R         &kp T        &kp Y        &kp U            &kp I         &kp O            &kp P                    &kp LEFT_BRACKET
+&kp TAB    &kp Q       &lt 8 W         &kp E         &kp R         &kp T        &kp Y        &kp U            &kp I         &kp O            &kp P                    &kp LEFT_BRACKET
 &kp LCTRL  &hm LGUI A  &hm LEFT_ALT S  &hm LCTRL D   &hm LSHIFT F  &kp G        &kp H        &hm RSHFT J      &hm RCTRL K   &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z       &kp X           &kp C         &kp V         &kp B        &kp N        &kp M            &kp COMMA     &kp DOT          &kp FSLH                 &kp ESC
-                                       &lt 6 ESCAPE  &lt 4 SPACE   &lt 1 TAB    &lt 3 ENTER  &lt 2 BACKSPACE  &lt 5 ESCAPE
+                                       &lt 7 ESCAPE  &lt 5 SPACE   &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE  &lt 6 ESCAPE
             >;
+        };
+
+        colemak {
+            bindings = <
+&kp TAB    &kp Q           &lt 8 W         &kp F         &kp P         &kp B        &kp J        &kp L            &kp U         &kp Y       &kp SEMI    &kp LBKT
+&kp LCTRL  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S   &hm LSHIFT T  &kp G        &kp M        &hm RSHIFT N     &hm RCTRL E   &hm RALT I  &hm RCMD O  &kp APOS
+&kp LSHFT  &kp X           &kp C           &kp D         &kp V         &kp Z        &kp K        &kp H            &kp COMMA     &kp DOT     &kp FSLH    &kp ESCAPE
+                                           &lt 7 ESCAPE  &lt 5 SPACE   &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE  &lt 6 ESCAPE
+            >;
+
+            label = "CLM";
         };
 
         navigation_layer {
@@ -167,8 +184,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LC(N1)            &kp LC(N2)             &kp LC(N3)        &kp LC(N4)  &kp LC(N5)    &kp LC(N6)  &kp LC(N7)  &kp LC(N8)  &kp LC(N9)  &kp LC(N0)  &trans
-&trans  &kp LGUI              &kp LALT               &kp LEFT_CONTROL  &kp LSHFT   &trans        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+&trans  &kp LC(N1)            &kp LC(N2)             &kp LC(N3)        &kp LC(N4)  &kp LC(N5)    &kp LC(N6)  &kp LC(N7)  &kp LC(N8)  &kp LC(N9)  &kp LC(N0)  &to 0
+&trans  &kp LGUI              &kp LALT               &kp LEFT_CONTROL  &kp LSHFT   &trans        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &to 1
 &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(C)         &kp LG(V)   &trans        &trans      &trans      &trans      &trans      &trans      &trans
                                                      &trans            &trans      &trans        &trans      &trans      &trans
             >;
@@ -213,7 +230,7 @@
             bindings = <
 &trans  &kp C_BRI_DEC  &kp C_BRI_UP  &trans  &trans  &trans    &kp C_PP         &kp C_NEXT       &kp C_VOL_DN     &kp C_VOL_UP     &kp K_MUTE  &bt BT_PRV
 &trans  &trans         &trans        &trans  &trans  &trans    &trans           &trans           &trans           &trans           &trans      &bt BT_NXT
-&trans  &trans         &trans        &tog 8  &trans  &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans      &bt BT_CLR
+&trans  &trans         &trans        &to 1   &trans  &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans      &bt BT_CLR
                                      &trans  &trans  &trans    &trans           &trans           &trans
             >;
 
@@ -248,15 +265,13 @@
             label = "Win";
         };
 
-        colemak {
+        layer_9 {
             bindings = <
-&kp TAB    &kp Q           &lt 7 W         &kp F         &kp P         &kp B        &kp J        &kp L            &kp U         &kp Y       &kp SEMI    &kp LBKT
-&kp LCTRL  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S   &hm LSHIFT T  &kp G        &kp M        &hm RSHIFT N     &hm RCTRL E   &hm RALT I  &hm RCMD O  &kp APOS
-&kp LSHFT  &kp X           &kp C           &kp D         &kp V         &kp Z        &kp K        &kp H            &kp COMMA     &kp DOT     &kp FSLH    &kp ESCAPE
-                                           &lt 6 ESCAPE  &lt 4 SPACE   &lt 1 TAB    &lt 3 ENTER  &lt 2 BACKSPACE  &lt 5 ESCAPE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
-
-            label = "CLM";
         };
     };
 };
