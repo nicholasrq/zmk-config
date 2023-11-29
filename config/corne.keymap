@@ -83,55 +83,51 @@
     };
 
     macros {
-        tmux_toggle_collapse: tmux_toggle_collapse {
+        tm_tog_col: tm_tog_col {
             compatible = "zmk,behavior-macro";
-            label = "TMUX_TOGGLE_COLLAPSE";
+            label = "TM_TOG_COL";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp Z>;
         };
 
-        tmux_session_switch: tmux_session_switch {
+        tm_sess_sw: tm_sess_sw {
             compatible = "zmk,behavior-macro";
-            label = "TMUX_SESSION_SWITCH";
+            label = "Tmux: Switch Session";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LC(S) &kp F>,
-                <&macro_release>,
-                <&kp LC(S) &kp F>;
+            bindings = <&kp LC(S) &kp LS(T)>;
         };
 
-        tmux_scroll_mode: tmux_scroll_mode {
+        tm_tog_sc: tm_tog_sc {
             compatible = "zmk,behavior-macro";
-            label = "TMUX_SCROLL_MODE";
+            label = "TM_TOG_SC";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp LEFT_BRACKET>;
         };
 
-        tmux_next_window: tmux_next_window {
+        tm_win_n: tm_win_n {
             compatible = "zmk,behavior-macro";
             label = "Go to next tmux window";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp N>;
         };
 
-        tmux_prev_window: tmux_prev_window {
+        tm_win_p: tm_win_p {
             compatible = "zmk,behavior-macro";
-            label = "TMUX_PREV_WINDOW";
+            label = "TM_WIN_P";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp P>;
         };
 
-        tmux_prev_session: tmux_prev_session {
+        tm_sess_n: tm_sess_n {
             compatible = "zmk,behavior-macro";
-            label = "TMUX_PREV_SESSION";
+            label = "TM_SESS_N";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp LEFT_PARENTHESIS>;
         };
 
-        tmux_next_session: tmux_next_session {
+        tm_sess_p: tm_sess_p {
             compatible = "zmk,behavior-macro";
-            label = "TMUX_NEXT_SESSION";
+            label = "TM_SESS_P";
             #binding-cells = <0>;
             bindings = <&kp LC(S) &kp RIGHT_PARENTHESIS>;
         };
@@ -152,25 +148,24 @@
 
         cpt: cpt {
             compatible = "zmk,behavior-hold-tap";
-            label = "CPT";
+            label = "Caps/Shift";
             bindings = <&kp>, <&caps_word>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            quick-tap-ms = <80>;
+            tapping-term-ms = <120>;
             flavor = "hold-preferred";
         };
 
         cm_tog: cm_tog {
             compatible = "zmk,behavior-tap-dance";
-            label = "CM_TOG";
+            label = "Colemak Toggle";
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE)>, <&to 1>;
         };
 
         qw_tog: qw_tog {
             compatible = "zmk,behavior-tap-dance";
-            label = "QW_TOG";
+            label = "Qwerty Toggle";
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE)>, <&to 0>;
         };
@@ -274,10 +269,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans     &trans  &trans  &kp PIPE     &tmux_prev_session  &tmux_next_session     &trans                &trans  &trans  &trans
-&trans  &trans  &kp LC(S)  &trans  &trans  &kp MINUS    &tmux_scroll_mode   &tmux_toggle_collapse  &tmux_session_switch  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans       &kp LC(Z)           &tmux_prev_window      &tmux_next_window     &trans  &trans  &trans
-                           &trans  &trans  &trans       &trans              &trans                 &trans
+&trans  &trans  &trans     &trans  &trans  &kp PIPE     &tm_sess_n  &tm_sess_p   &trans       &trans  &trans  &trans
+&trans  &trans  &kp LC(S)  &trans  &trans  &kp MINUS    &tm_tog_sc  &tm_tog_col  &tm_sess_sw  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans       &kp LC(Z)   &tm_win_p    &tm_win_n    &trans  &trans  &trans
+                           &trans  &trans  &trans       &trans      &trans       &trans
             >;
 
             label = "Tmux";
@@ -292,15 +287,6 @@
             >;
 
             label = "Win";
-        };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
         };
     };
 };
