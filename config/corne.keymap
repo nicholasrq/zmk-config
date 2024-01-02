@@ -156,10 +156,9 @@
             #binding-cells = <2>;
             global-quick-tap;
             flavor = "tap-unless-interrupted";
-            quick-tap-ms = <100>;
-            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            tapping-term-ms = <150>;
             require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <13 14 15 16 17 18 19 20 21 22>;
         };
 
         cpt: cpt {
