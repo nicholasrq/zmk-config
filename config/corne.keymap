@@ -154,7 +154,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             quick-tap-ms = <80>;
             tapping-term-ms = <300>;
             hold-trigger-on-release;
@@ -192,7 +192,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             quick-tap-ms = <80>;
             tapping-term-ms = <300>;
             hold-trigger-on-release;
