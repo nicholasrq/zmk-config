@@ -1,12 +1,17 @@
-ZMK_COMBO(l_sqb, &kp LEFT_BRACKET, 14 15, DEF COL)
-ZMK_COMBO(r_sqb, &kp RIGHT_BRACKET, 21 20, DEF COL)
-ZMK_COMBO(l_par, &kp LEFT_PARENTHESIS, 15 16, DEF COL)
-ZMK_COMBO(r_par, &kp RIGHT_PARENTHESIS, 20 19, DEF COL)
+#undef COMBO_HOOK
+#define COMBO_HOOK require-prior-idle-ms = <100>
+#define COMBO_TERM_FAST 20
+#define COMBO_TERM_SLOW 35
 
-ZMK_COMBO(til, &kp TILDE, 26 27, DEF COL)
-ZMK_COMBO(pipe, &kp PIPE, 33 32, DEF COL)
-ZMK_COMBO(col, &kp COLON, 2 3, DEF COL)
-ZMK_COMBO(semi, &kp SEMI, 8 9, DEF COL)
-ZMK_COMBO(eq, &kp EQUAL, 3 4, DEF COL)
-ZMK_COMBO(plus, &kp PLUS, 7 8, DEF COL)
+ZMK_COMBO(l_sqb,  &kp LEFT_BRACKET,       14 15,  DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(r_sqb,  &kp RIGHT_BRACKET,      21 20,  DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(l_par,  &kp LEFT_PARENTHESIS,   15 16,  DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(r_par,  &kp RIGHT_PARENTHESIS,  20 19,  DEF COL, COMBO_TERM_FAST)
+
+ZMK_COMBO(til,    &kp TILDE,              26 27,  DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(pipe,   &kp PIPE,               33 32,  DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(col,    &kp COLON,              2 3,    DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(semi,   &kp SEMI,               8 9,    DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(eq,     &kp EQUAL,              3 4,    DEF COL, COMBO_TERM_FAST)
+ZMK_COMBO(plus,   &kp PLUS,               7 8,    DEF COL, COMBO_TERM_FAST)
 
