@@ -1,0 +1,41 @@
+// enter tmux command mode
+ZMK_BEHAVIOR(tmux_command, macro,
+  label = "Tmux: Command";
+  bindings = <&kp LC(S) &kp Z>;
+)
+
+// open session switcher
+ZMK_BEHAVIOR(tmux_session, macro,
+  label = "Tmux: Switch Session";
+  bindings = <&kp LC(S) &kp LS(T)>;
+)
+
+ZMK_BEHAVIOR(tmux_next_win, macro,
+  label = "Tmux: Next window";
+  bindings = <&kp LC(S) &kp N>;
+)
+
+ZMK_BEHAVIOR(tmux_prev_win, macro,
+  label = "Tmux: Prev window";
+  bindings = <&kp LC(S) &kp P>;
+)
+
+ZMK_BEHAVIOR(tmux_next_sess, macro,
+  label = "Tmux: Next session";
+  bindings = <&kp LC(S) &kp LEFT_PARENTHESIS>;
+)
+
+ZMK_BEHAVIOR(tmux_prev_sess, macro,
+  label = "Tmux: Prev session";
+  bindings = <&kp LC(S) &kp RIGHT_PARENTHESIS>;
+)
+
+ZMK_BEHAVIOR(kb_tog_ru, macro,
+  label = "Enable QWERTY + switch to Russian";
+  bindings = <&kp LS(LA(LC(LG(F6)))) &to DEF>;
+);
+
+ZMK_BEHAVIOR(kb_tog_en, macro,
+  label = "Enable Colemak + switch to English";
+  bindings = <&kp LS(LA(LC(LG(F5)))) &to COL>;
+);
