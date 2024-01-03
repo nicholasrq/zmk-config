@@ -33,9 +33,9 @@ ZMK_BEHAVIOR(tmux_prev_sess, macro,
 ZMK_BEHAVIOR(kb_tog_ru, macro,
   label = "Enable QWERTY + switch to Russian";
   bindings = <&kp LS(LA(LC(LG(F6)))) &to DEF>;
-);
+)
 
 ZMK_BEHAVIOR(kb_tog_en, macro,
   label = "Enable Colemak + switch to English";
   bindings = <&kp LS(LA(LC(LG(F5)))) &to COL>;
-);
+)
