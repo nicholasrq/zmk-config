@@ -31,12 +31,17 @@
 #define TMU 7
 #define WIN 8
 
+#include "combos.dtsi"
+
 // Custom keys
 #define U_CP LG(C)
 #define U_CU LG(X)
 #define U_PA LG(V)
 #define U_UN LG(Z)
 #define U_RE LS(LG(Z))
+
+#define HYPER(key) \
+  LS(LA(LC(LG(key))))
 
 // Delays
 #define QUICK_TAP_MS 175
@@ -57,7 +62,6 @@
     bindings = <bindings>; \
   )
 
-#include "combos.dtsi"
 
 // Home-row mods
 MAKE_HMR(hmr_l, &kp, &kp, KEYS_R THUMBS)
@@ -132,8 +136,8 @@ ZMK_LAYER(tmux,
 )
 
 ZMK_LAYER(win,
-&trans  &trans  &trans  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &trans    &kp LS(LA(LC(LG(Y))))  &kp LS(LA(LC(LG(U))))  &trans                 &trans                 &trans  &trans
-&trans  &trans  &trans  &trans                 &kp LS(LA(LC(LG(F))))  &trans    &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(L))))  &trans  &trans
-&trans  &trans  &trans  &trans                 &trans                 &trans    &trans                 &kp LS(LA(LC(LG(M))))  &trans                 &trans                 &trans  &trans
-                        &trans                 &trans                 &trans    &trans                 &trans                 &trans
+&trans  &trans  &trans  &kp HYPER(E)  &kp HYPER(R)  &trans    &kp HYPER(Y)  &kp HYPER(U)  &trans        &trans         &trans  &trans
+&trans  &trans  &trans  &trans        &kp HYPER(F)  &trans    &kp HYPER(H)  &kp HYPER(J)  &kp HYPER(K)  &kp  HYPER(L)  &trans  &trans
+&trans  &trans  &trans  &trans        &trans        &trans    &trans        &kp HYPER(M)  &trans        &trans         &trans  &trans
+                        &trans        &trans        &trans    &trans        &trans        &trans
 )

@@ -1,5 +1,5 @@
 #undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <100>
+#define COMBO_HOOK require-prior-idle-ms = <150>
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
 
@@ -14,4 +14,3 @@ ZMK_COMBO(col, &kp COLON, 2 3, DEF COL, COMBO_TERM_FAST)
 ZMK_COMBO(semi, &kp SEMI, 8 9, DEF COL, COMBO_TERM_FAST)
 ZMK_COMBO(eq, &kp EQUAL, 3 4, DEF COL, COMBO_TERM_FAST)
 ZMK_COMBO(plus, &kp PLUS, 7 8, DEF COL, COMBO_TERM_FAST)
-
