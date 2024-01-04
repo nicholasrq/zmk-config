@@ -62,22 +62,25 @@ MAKE_HMR(hmr_l, &kp, &kp, KEYS_R THUMBS)
 MAKE_HMR(hmr_r, &kp, &kp, KEYS_L THUMBS)
 
 // Macros
-ZMK_BEHAVIOR(tmux_command, macro,
+ZMK_BEHAVIOR(tmux_mmax, macro,
   bindings = <&kp LC(S) &kp Z>;
-) // Enter tmux command mode
-ZMK_BEHAVIOR(tmux_session, macro,
+) // Minimize/maximize current tmux pane
+ZMK_BEHAVIOR(tmux_scr, macro,
+  bindings = <&kp LC(S) &kp LBKT>;
+) // Enter tmux scroll mode
+ZMK_BEHAVIOR(tmux_s_t, macro,
   bindings = <&kp LC(S) &kp LS(T)>;
 ) // Open session switcher
-ZMK_BEHAVIOR(tmux_next_win, macro, 
+ZMK_BEHAVIOR(tmux_w_n, macro, 
   bindings = <&kp LC(S) &kp N>;
 ) // Switch to next tmux window
-ZMK_BEHAVIOR(tmux_prev_win, macro,
+ZMK_BEHAVIOR(tmux_w_p, macro,
   bindings = <&kp LC(S) &kp P>;
 ) // Switch to prev tmux window
-ZMK_BEHAVIOR(tmux_next_sess, macro,
+ZMK_BEHAVIOR(tmux_s_n, macro,
   bindings = <&kp LC(S) &kp LPAR>;
 ) // Switch to next tmux session
-ZMK_BEHAVIOR(tmux_prev_sess, macro,
+ZMK_BEHAVIOR(tmux_s_p, macro,
   bindings = <&kp LC(S) &kp RPAR>;
 ) // Switch to prev tmux session
 ZMK_BEHAVIOR(kb_tog_ru, macro,
@@ -137,9 +140,9 @@ ZMK_LAYER(med,
 )
 
 ZMK_LAYER(tmux,
-&trans  &trans  &trans     &trans  &trans  &kp PIPE     &tm_sess_n  &tm_sess_p   &trans       &trans  &trans  &trans
-&trans  &trans  &kp LC(S)  &trans  &trans  &kp MINUS    &tm_tog_sc  &tm_tog_col  &tm_sess_sw  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans       &kp LC(Z)   &tm_win_p    &tm_win_n    &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &kp PIPE     &tmux_s_n   &tmux_s_p    &trans       &trans  &trans  &trans
+&trans  &trans  &kp LC(S)  &trans  &trans  &kp MINUS    &tmux_scr   &tmux_mmax   &tmux_s_t    &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans       &kp LC(Z)   &tmux_w_p    &tmux_w_n    &trans  &trans  &trans
                            &trans  &trans  &trans       &trans      &trans       &trans
 )
 
