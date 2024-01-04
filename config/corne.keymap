@@ -32,7 +32,6 @@
 #define TMU 7
 #define WIN 8
 
-#include "combos.dtsi"
 
 // Custom keys
 #define U_CP LG(C)
@@ -43,6 +42,8 @@
 #define PS_F LG(LS(3))
 #define PS_P LG(LS(4))
 #define PS_R LG(LS(5))
+
+#include "combos.dtsi"
 
 #define HYPER(key) \
   LS(LA(LC(LG(key))))
