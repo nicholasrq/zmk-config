@@ -1,6 +1,6 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
-#define COMBO_TERM_FAST 18
+#define COMBO_TERM_FAST 25
 
 // TOP ROW
 // for : and ;
