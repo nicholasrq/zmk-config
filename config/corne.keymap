@@ -62,14 +62,30 @@ MAKE_HMR(hmr_l, &kp, &kp, KEYS_R THUMBS)
 MAKE_HMR(hmr_r, &kp, &kp, KEYS_L THUMBS)
 
 // Macros
-ZMK_BEHAVIOR(tmux_command,   macro, bindings = <&kp LC(S) &kp Z>)       // Enter tmux command mode
-ZMK_BEHAVIOR(tmux_session,   macro, bindings = <&kp LC(S) &kp LS(T)>)   // Open session switcher
-ZMK_BEHAVIOR(tmux_next_win,  macro, bindings = <&kp LC(S) &kp N>)       // Switch to next tmux window
-ZMK_BEHAVIOR(tmux_prev_win,  macro, bindings = <&kp LC(S) &kp P>)       // Switch to prev tmux window
-ZMK_BEHAVIOR(tmux_next_sess, macro, bindings = <&kp LC(S) &kp LPAR>)    // Switch to next tmux session
-ZMK_BEHAVIOR(tmux_prev_sess, macro, bindings = <&kp LC(S) &kp RPAR>)    // Switch to prev tmux session
-ZMK_BEHAVIOR(kb_tog_ru,      macro, bindings = <&kp HYPER(F6) &to DEF>) // Enable QWERTY and trigger OS layout switch to russian
-ZMK_BEHAVIOR(kb_tog_en,      macro, bindings = <&kp HYPER(F5) &to COL>) // Enable Colemak and trigger OS layout switch to english
+ZMK_BEHAVIOR(tmux_command, macro,
+  bindings = <&kp LC(S) &kp Z>;
+) // Enter tmux command mode
+ZMK_BEHAVIOR(tmux_session, macro,
+  bindings = <&kp LC(S) &kp LS(T)>;
+) // Open session switcher
+ZMK_BEHAVIOR(tmux_next_win, macro, 
+  bindings = <&kp LC(S) &kp N>;
+) // Switch to next tmux window
+ZMK_BEHAVIOR(tmux_prev_win, macro,
+  bindings = <&kp LC(S) &kp P>;
+) // Switch to prev tmux window
+ZMK_BEHAVIOR(tmux_next_sess, macro,
+  bindings = <&kp LC(S) &kp LPAR>;
+) // Switch to next tmux session
+ZMK_BEHAVIOR(tmux_prev_sess, macro,
+  bindings = <&kp LC(S) &kp RPAR>;
+) // Switch to prev tmux session
+ZMK_BEHAVIOR(kb_tog_ru, macro,
+  bindings = <&kp HYPER(F6) &to DEF>;
+) // Enable QWERTY and trigger OS layout switch to russian
+ZMK_BEHAVIOR(kb_tog_en, macro,
+  bindings = <&kp HYPER(F5) &to COL>;
+) // Enable Colemak and trigger OS layout switch to english
 
 ZMK_LAYER(default,
 &kp TAB     &kp Q         &lt WIN W         &kp E          &kp R            &kp T        &kp Y          &kp U             &kp I          &kp O         &kp P            &kp LEFT_BRACKET
