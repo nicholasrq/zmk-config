@@ -13,6 +13,9 @@
 #include "keys.dtsi"
 #include "helper.h"
 
+// Delays
+#define QUICK_TAP_MS 175
+
 &led_strip {
     chain-length = <54>;
 };
@@ -61,8 +64,7 @@
 #define HYPER(key) \
   LS(LA(LC(LG(key))))
 
-// Delays
-#define QUICK_TAP_MS 175
+
 
 #include "hmr.dtsi"
 #include "combos.dtsi"
