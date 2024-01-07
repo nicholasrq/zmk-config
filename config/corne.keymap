@@ -39,9 +39,9 @@
 #define U_PA LG(V)
 #define U_UN LG(Z)
 #define U_RE LS(LG(Z))
-#define PS_F LG(LS(3))
-#define PS_P LG(LS(4))
-#define PS_R LG(LS(5))
+#define PS_F LG(LS(N3))
+#define PS_P LG(LS(N4))
+#define PS_R LG(LS(N5))
 
 #include "combos.dtsi"
 
