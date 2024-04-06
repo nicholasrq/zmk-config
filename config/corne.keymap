@@ -58,7 +58,7 @@
 #define PS_F LG(LS(N3))
 #define PS_P LG(LS(N4))
 #define PS_R LG(LS(N5))
-#define HYPER LG(LA(LC(LSHIFT)))
+#define HYPER LS(LA(LC(LEFT_GUI)))
 #define ______ &trans
 
 #define HYPER_C(key) \
