@@ -1,6 +1,7 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 #define COMBO_TERM_FAST 25
+#define COMBO_TERM_SLOW 50
 
 // TOP ROW
 // for : and ;
@@ -26,3 +27,6 @@ ZMK_COMBO(pipe, &kp PIPE, RB2 RB3, DEF COL, COMBO_TERM_FAST)
 // copy/paste macOS
 ZMK_COMBO(plus, &kp U_CP, LB1 LB2, DEF COL, COMBO_TERM_FAST)
 ZMK_COMBO(plus, &kp U_PA, RB1 RB2, DEF COL, COMBO_TERM_FAST)
+
+// hyper key
+ZMK_COMBO(hyper, &kp HYPER, LH0 RH0, DEF COL, COMBO_TERM_SLOW)
