@@ -21,8 +21,8 @@ ZMK_BEHAVIOR(tmux_s_p, macro,
   bindings = <&kp LC(S) &kp RPAR>;
 ) // Switch to prev tmux session
 ZMK_BEHAVIOR(kb_tog_ru, macro,
-  bindings = <&kp HYPER(F6) &to DEF>;
+  bindings = <&kp HYPER_C(F6) &to DEF>;
 ) // Enable QWERTY and trigger OS layout switch to russian
 ZMK_BEHAVIOR(kb_tog_en, macro,
-  bindings = <&kp HYPER(F5) &to COL>;
+  bindings = <&kp HYPER_C(F5) &to COL>;
 ) // Enable Colemak and trigger OS layout switch to english
